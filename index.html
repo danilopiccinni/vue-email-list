@@ -17,13 +17,21 @@
     <!-- contenitore da prassi che si usa con vue -->
     <div id="app">
         <!-- lista non ordinata dove verranno creati con un ciclo 'v-for' le mail da visualizzare -->
-        <ul class="lista-emails">
+                            <!-- v-if di controllo se le mail sono state generte tutte -->
+        <ul class="lista-emails" v-if="eMails.length == 10">
             <!-- ciclo per visualizzare dell'array (eMails) riempita tramite la api -->
             <li v-for="email in eMails">
                 <!-- inserisce la email corrente da visualizzare -->
                 {{email}}
             </li>
+
         </ul>
+
+
+        <!-- v-else/altrimenti che si visualizza mentre si aspetta la generazione delle mail -->
+        <span v-else>
+            Attendi...elaboro...
+        </span>
 
     </div>
 
