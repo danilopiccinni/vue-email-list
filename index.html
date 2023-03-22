@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Email List</title>
+
+    <!-- script inserito per utilizzare axion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
+</head>
+<body>
+    <!-- script da prassi per utilizzare vuejs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- contenitore da prassi che si usa con vue -->
+    <div id="app">
+        <!-- lista non ordinata dove verranno creati con un ciclo 'v-for' le mail da visualizzare -->
+        <ul class="lista-emails">
+            <!-- ciclo per visualizzare dell'array (eMails) riempita tramite la api -->
+            <li v-for="email in eMails">
+                <!-- inserisce la email corrente da visualizzare -->
+                {{email}}
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- script che collega il nostro documento javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
